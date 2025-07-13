@@ -1,0 +1,278 @@
+
+
+🔹 MCQ 1:
+Boot sector virus kis part ko infect karta hai?
+A) Program files
+B) Operating system files
+C) Boot sector of the hard drive
+D) RAM
+
+✅ Answer: C) Boot sector of the hard drive
+
+🔹 MCQ 2:
+Kaunsa virus Microsoft Word ya Excel documents ko target karta hai?
+A) Boot Sector Virus
+B) Macro Virus
+C) File Infector Virus
+D) Trojan Horse
+
+✅ Answer: B) Macro Virus
+
+🔹 MCQ 3:
+Kaunsa virus boot sector aur program files dono ko infect kar sakta hai?
+A) File Infector Virus
+B) Macro Virus
+C) Multipartite Virus
+D) Spyware
+
+✅ Answer: C) Multipartite Virus
+
+🔹 MCQ 4:
+Agar ek malware khud network par spread ho bina user ke kisi action ke, to usko kya kehte hain?
+A) Worm
+B) Trojan Horse
+C) Polymorphic Virus
+D) File Infector Virus
+
+✅ Answer: A) Worm
+
+🔹 MCQ 5:
+Kaunsa malware apni shakl badalne ki ability rakhta hai taake antivirus usko detect na kar sake?
+A) Macro Virus
+B) Polymorphic Virus
+C) Worm
+D) Boot Sector Virus
+
+✅ Answer: B) Polymorphic Virus
+
+🔹 MCQ 6:
+Ek software jo useful program lagta hai lekin andar se harmful hota hai, usko kya kehte hain?
+A) Spyware
+B) Trojan Horse
+C) Worm
+D) File Infector Virus
+
+✅ Answer: B) Trojan Horse
+
+🔹 MCQ 7:
+Spyware ka main purpose kya hota hai?
+A) User ki files delete karna
+B) System ko slow karna
+C) User ka sensitive data chori karna
+D) Boot sector ko damage karna
+
+✅ Answer: C) User ka sensitive data chori karna
+
+🔹 MCQ 8:
+Kaunsa malware antivirus software ko bypass karne aur detect hone se bachne ke liye apni coding change kar sakta hai?
+A) Worm
+B) Macro Virus
+C)
+
+
+
+
+
+
+
+You said:
+englsih
+
+
+ChatGPT said:
+Here are some MCQs related to malware and viruses. Try answering them first, then check the correct answers! ✅
+
+🔹 MCQ 1:
+Which part of the system does a boot sector virus infect?
+A) Program files
+B) Operating system files
+C) Boot sector of the hard drive
+D) RAM
+
+✅ Answer: C) Boot sector of the hard drive
+
+🔹 MCQ 2:
+Which virus targets Microsoft Word or Excel documents?
+A) Boot Sector Virus
+B) Macro Virus
+C) File Infector Virus
+D) Trojan Horse
+
+✅ Answer: B) Macro Virus
+
+🔹 MCQ 3:
+Which virus infects both the boot sector and program files?
+A) File Infector Virus
+B) Macro Virus
+C) Multipartite Virus
+D) Spyware
+
+✅ Answer: C) Multipartite Virus
+
+🔹 MCQ 4:
+Which malware spreads over a network without any user action?
+A) Worm
+B) Trojan Horse
+C) Polymorphic Virus
+D) File Infector Virus
+
+✅ Answer: A) Worm
+
+🔹 MCQ 5:
+Which virus has the ability to change its code to avoid detection?
+A) Macro Virus
+B) Polymorphic Virus
+C) Worm
+D) Boot Sector Virus
+
+✅ Answer: B) Polymorphic Virus
+
+🔹 MCQ 6:
+A program that appears useful but contains malicious code is called?
+A) Spyware
+B) Trojan Horse
+C) Worm
+D) File Infector Virus
+
+✅ Answer: B) Trojan Horse
+
+🔹 MCQ 7:
+What is the main purpose of spyware?
+A) Delete user files
+B) Slow down the system
+C) Steal user’s sensitive data
+D) Damage the boot sector
+
+✅ Answer: C) Steal user’s sensitive data
+
+🔹 MCQ 8:
+Which malware changes its coding to bypass antivirus software?
+A) Worm
+B) Macro Virus
+C) Polymorphic Virus
+D) Trojan Horse
+
+✅ Answer: C) Polymorphic Virus
+
+Try these and let me know if you need more! 🚀
+
+
+
+
+
+
+
+You said:
+more 
+
+
+ChatGPT said:
+Here are some more MCQs related to malware and viruses. Try answering them first, then check the correct answers! ✅
+
+🔹 MCQ 9:
+Which type of malware creates multiple copies of itself to spread across the system?
+A) Trojan Horse
+B) Spyware
+C) Worm
+D) Macro Virus
+
+✅ Answer: C) Worm
+
+🔹 MCQ 10:
+Which malware requires a host file to spread?
+A) Virus
+B) Worm
+C) Spyware
+D) Trojan Horse
+
+✅ Answer: A) Virus
+
+🔹 MCQ 11:
+Which of the following is NOT a method used by malware to spread?
+A) Email attachments
+B) USB drives
+C) Downloading software from trusted sources
+D) File-sharing networks
+
+✅ Answer: C) Downloading software from trusted sources (Malware usually spreads from untrusted sources)
+
+🔹 MCQ 12:
+Which malware type is specifically designed to gather and send personal data without user consent?
+A) Trojan Horse
+B) Spyware
+C) Macro Virus
+D) Boot Sector Virus
+
+✅ Answer: B) Spyware
+
+🔹 MCQ 13:
+Which malware pretends to be a legitimate program but performs malicious activities in the background?
+A) Worm
+B) Trojan Horse
+C) File Infector Virus
+D) Ransomware
+
+✅ Answer: B) Trojan Horse
+
+🔹 MCQ 14:
+Which virus primarily targets executable files like .exe and .dll?
+A) Boot Sector Virus
+B) Macro Virus
+C) File Infector Virus
+D) Polymorphic Virus
+
+✅ Answer: C) File Infector Virus
+
+🔹 MCQ 15:
+What is the main difference between a virus and a worm?
+A) Virus spreads on its own, while a worm requires a host file
+B) Worm spreads on its own, while a virus requires a host file
+C) Virus and worm are the same
+D) Worms only spread through USB devices
+
+✅ Answer: B) Worm spreads on its own, while a virus requires a host file
+
+🔹 MCQ 16:
+Which type of virus is known for changing its code structure to avoid detection?
+A) Boot Sector Virus
+B) Polymorphic Virus
+C) Spyware
+D) Worm
+
+✅ Answer: B) Polymorphic Virus
+
+🔹 MCQ 17:
+Which of the following malware types does NOT replicate itself?
+A) Virus
+B) Worm
+C) Spyware
+D) Macro Virus
+
+✅ Answer: C) Spyware (It collects data but does not self-replicate)
+
+🔹 MCQ 18:
+Which malware type can encrypt files and demand ransom to unlock them?
+A) Spyware
+B) Ransomware
+C) Trojan Horse
+D) Boot Sector Virus
+
+✅ Answer: B) Ransomware
+
+🔹 MCQ 19:
+Which malware is most likely to spread through phishing emails?
+A) Trojan Horse
+B) Worm
+C) File Infector Virus
+D) Macro Virus
+
+✅ Answer: A) Trojan Horse
+
+🔹 MCQ 20:
+Which of the following is NOT a virus?
+A) Ransomware
+B) File Infector Virus
+C) Boot Sector Virus
+D) Macro Virus
+
+✅ Answer: A) Ransomware (It is malware but not a virus because it doesn’t attach to host files)

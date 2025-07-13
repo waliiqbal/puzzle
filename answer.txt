@@ -1,0 +1,41 @@
+http://54.183.79.224:3002/gameApp/getQuestionforgame?categoryId=67dc8c56ad3bcd71bce34c97&ageRange=Kids
+{
+    "success": true,
+    "message": "Question fetched successfully",
+    "data": {
+        "_id": "67dedd4cad3bcd71bce350c7",
+        "category": "67dc8c56ad3bcd71bce34c97",
+        "questionType": "text",
+        "text": {
+            "en": "What is the capital of France?",
+            "ar": "ما هي عاصمة فرنسا؟"
+        },
+        "media": "https://example.com/image.jpg",
+        "options": {
+            "A": {
+                "ar": "لندن",
+                "en": "London"
+            },
+            "B": {
+                "ar": "باريس",
+                "en": "Paris"
+            },
+            "C": {
+                "ar": "برلين",
+                "en": "Berlin"
+            },
+            "D": {
+                "ar": "مدريد",
+                "en": "Madrid"
+            }
+        },
+        "correctAnswer": "B",
+        "ageRange": [
+            "Kids"
+        ],
+        "isShow": false,
+        "createdAt": "2025-03-22T15:54:52.332Z",
+        "updatedAt": "2025-03-22T15:54:52.332Z",
+        "__v": 0
+    }
+}

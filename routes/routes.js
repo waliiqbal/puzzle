@@ -1,7 +1,7 @@
 import cors from "cors";
 import mongoose from "mongoose";
 import {createUser, socialLogin, editUser, getUser, getUserById} from "../puzzleController/userController.js";
-import {jwtAuthMiddleware} from "../MiddleWear/jwt"
+import {jwtAuthMiddleware} from "../MiddleWear/jwt.js"
 import { createStoreItem, getAllStoreItems } from "../puzzleController/storeController.js";
 import { userPurchase } from "../puzzleController/purchaseController.js"
 // import { createquestion, createQuestionbyself, deletequetion, Editquestion, getQuestions } from "../gamecontrollers/questionController.js";

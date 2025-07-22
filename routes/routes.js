@@ -12,8 +12,8 @@ import { userPurchase } from "../puzzleController/purchaseController"
  
 
 const CustomRoutes = (http, express) => {
-   http.get("/puzzleApp", (req, res) => {
-     res.send("puzzle app");
+   http.get("/wordgame", (req, res) => {
+     res.send("word Game App");
    });
 
   http.use(cors());

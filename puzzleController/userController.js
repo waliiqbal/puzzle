@@ -43,10 +43,6 @@ const socialLogin = async (req, res) => {
 };
 
 
-// controllers/userController.js
-
-
-
 
 
 const editUser = async (req, res) => {

@@ -19,9 +19,9 @@ const userSchema = new Schema({
 
  
   // Cosmetic Selections
-  themeId: { type: mongoose.Schema.Types.ObjectId, ref: 'Theme', default: null },
-  poleId: { type: mongoose.Schema.Types.ObjectId, ref: 'Pole', default: null },
-  frameId: { type: mongoose.Schema.Types.ObjectId, ref: 'Frame', default: null },
+  themeId: { type: mongoose.Schema.Types.ObjectId, ref: 'store', default: null },
+  poleId: { type: mongoose.Schema.Types.ObjectId, ref: 'store', default: null },
+  frameId: { type: mongoose.Schema.Types.ObjectId, ref: 'store', default: null },
 
  
   // Settings
@@ -32,4 +32,4 @@ const userSchema = new Schema({
   timestamps: true
 });
 
-export { userSchema  }; // ✅ Named Export
+export { userSchema  }; 

@@ -14,7 +14,7 @@ const generateGuestUsername = () => {
   return `guest${Math.floor(1000 + Math.random() * 9000)}`;
 };
 
-// ✅ Create Guest User Service
+
 const createUserService = async (body) => {
   const { username } = body;
   const finalUsername = username || generateGuestUsername();
@@ -37,7 +37,7 @@ const createUserService = async (body) => {
     throw err;
   }
 
-  // ❗FIXED: Use userData instead of User
+
   const newUser = new userData({
     username: finalUsername,
     authProvider: "guest",
@@ -54,7 +54,7 @@ const createUserService = async (body) => {
   return { user: newUser, token };
 };
 
-// ✅ Google Client
+
 const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 // ✅ Social Login Service
@@ -110,7 +110,6 @@ const socialLoginService = async ({ authProvider, token }) => {
   return { user, token: jwtToken };
 };
 
-// ✅ Edit User Service
 const editUserService = async (_id, updateFields) => {
   if (!_id) {
     const error = new Error("User ID is required");

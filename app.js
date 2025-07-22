@@ -7,7 +7,7 @@ import dotenv from 'dotenv';
 dotenv.config()
 
 const app = express();
-const port = 3002;
+const port = process.env.port || 3002;
 
 app.use(cors());
 app.use(express.static('public')); // ✅ Corrected

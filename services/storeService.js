@@ -21,7 +21,7 @@ dotenv.config();
 
 const getAllStores = async () => {
   try {
-    const stores = await storeData.find(); ts
+    const stores = await storeData.find(); 
     return {
       success: true,
       message: 'Store items fetched successfully',

@@ -1,4 +1,4 @@
-import { createUserService, socialLoginService, editUserService, getUserService, getUserByIdService } from '../services/userService'
+import { createUserService, socialLoginService, editUserService, getUserService, getUserByIdService } from '../services/userService.js'
 
 const createUser = async (req, res) => {
   try {

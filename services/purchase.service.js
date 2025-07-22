@@ -1,9 +1,9 @@
 import { model } from 'mongoose';
-import { storeSchema } from '../schema/storeSchema'
+import { storeSchema } from '../schema/storeSchema.js'
 const storeData = model('store', storeSchema);
-import { userSchema } from '../schema/userSchema'
+import { userSchema } from '../schema/userSchema.js'
 const userData = model('user', userSchema);
-import { PurchaseSchema } from "../schema/purchaseSchema"
+import { PurchaseSchema } from "../schema/purchaseSchema.js"
 const purchaseData = model('purchase', PurchaseSchema);
 import jwt from "jsonwebtoken";
 import dotenv from 'dotenv';

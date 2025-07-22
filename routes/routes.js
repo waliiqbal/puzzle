@@ -1,9 +1,9 @@
 import cors from "cors";
 import mongoose from "mongoose";
-import {createUser, socialLogin, editUser, getUser, getUserById} from "../puzzleController/userController";
+import {createUser, socialLogin, editUser, getUser, getUserById} from "../puzzleController/userController.js";
 import {jwtAuthMiddleware} from "../MiddleWear/jwt"
-import { createStoreItem, getAllStoreItems } from "../puzzleController/storeController";
-import { userPurchase } from "../puzzleController/purchaseController"
+import { createStoreItem, getAllStoreItems } from "../puzzleController/storeController.js";
+import { userPurchase } from "../puzzleController/purchaseController.js"
 // import { createquestion, createQuestionbyself, deletequetion, Editquestion, getQuestions } from "../gamecontrollers/questionController.js";
 //  import { createcategory, deletecategory, editCategory, getCategories } from "../gamecontrollers/categoryController.js";
 //  import upload from "../MiddleWear/multer.js"; // Adjust path as needed

@@ -1,6 +1,6 @@
  
 
- import { createPurchaseService } from '../services/purchase.service'
+ import { createPurchaseService } from '../services/purchase.service.js'
  const userPurchase = async (req, res) => {
   try {
     const userId = req.user._id; // ✅ UserId from token

@@ -1,7 +1,7 @@
 import { model } from 'mongoose';
 import axios from "axios";
 import { OAuth2Client } from "google-auth-library";
-import { userSchema } from '../schema/userSchema'
+import { userSchema } from '../schema/userSchema.js'
 const userData = model('user', userSchema);
 import jwt from "jsonwebtoken";
 import dotenv from 'dotenv';

@@ -1,5 +1,5 @@
 import { model } from 'mongoose';
-import { storeSchema } from '../schema/storeSchema'
+import { storeSchema } from '../schema/storeSchema.js'
 const storeData = model('store', storeSchema);
 import jwt from "jsonwebtoken";
 import dotenv from 'dotenv';

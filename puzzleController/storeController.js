@@ -1,4 +1,4 @@
-import { createStore, getAllStores } from '../services/storeService'
+import { createStore, getAllStores } from '../services/storeService.js'
  const createStoreItem = async (req, res) => {
   try {
     const result = await createStore(req.body); 

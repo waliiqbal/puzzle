@@ -4,6 +4,7 @@ import {createUser, socialLogin, editUser, getUser, getUserById} from "../puzzle
 import {jwtAuthMiddleware} from "../MiddleWear/jwt.js"
 import { createStoreItem, getAllStoreItems } from "../puzzleController/storeController.js";
 import { userPurchase } from "../puzzleController/purchaseController.js"
+import {initiateFriendsGame, joinGameController,startGame, roundEnd} from "../puzzleController/gameController.js"
 // import { createquestion, createQuestionbyself, deletequetion, Editquestion, getQuestions } from "../gamecontrollers/questionController.js";
 //  import { createcategory, deletecategory, editCategory, getCategories } from "../gamecontrollers/categoryController.js";
 //  import upload from "../MiddleWear/multer.js"; // Adjust path as needed
@@ -39,9 +40,18 @@ const CustomRoutes = (http, express) => {
 http.post("/puzzleApp/createstoreItem", createStoreItem);
 http.get("/puzzleApp/getAllStoreItems", getAllStoreItems);
 http.post("/puzzleApp/userPurchase",jwtAuthMiddleware, userPurchase);
-// http.get("/gameApp/getCategories", getCategories);
-// http.delete("/gameApp/deletecategory/:_id", deletecategory);
-// http.patch("/gameApp/editCategory", editCategory);
+
+
+
+// purchase routes 
+http.post("/puzzleApp/userPurchase",jwtAuthMiddleware, userPurchase);
+startGame
+roundEnd
+// gameroutes
+http.post("/puzzleApp/initiateFriendsGame",jwtAuthMiddleware, initiateFriendsGame);
+http.post("/puzzleApp/joinGameController", joinGameController);
+http.post("/puzzleApp/startGame", startGame);
+http.post("/puzzleApp/roundEnd", roundEnd);
 
 }
 

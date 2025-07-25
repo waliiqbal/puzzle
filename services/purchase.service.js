@@ -2,7 +2,7 @@ import { model } from 'mongoose';
 import { storeSchema } from '../schema/storeSchema.js'
 const storeData = model('store', storeSchema);
 import { userSchema } from '../schema/userSchema.js'
-const userData = model('user', userSchema);
+const userData = model('User', userSchema);
 import { PurchaseSchema } from "../schema/purchaseSchema.js"
 const purchaseData = model('purchase', PurchaseSchema);
 import jwt from "jsonwebtoken";

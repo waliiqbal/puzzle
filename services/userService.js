@@ -217,7 +217,7 @@ const getLeaderboardService = async (page = 1, limit = 10) => {
     .sort({ totalScore: -1 }) // 🔥 highest totalScore first
     .skip(skip)
     .limit(limit)
-    .select("userName email displayPic totalWin score totalScore longestWordCount");
+    .select("username email displayPic totalWin score totalScore longestWordCount");
 
   const totalUsers = await userData.countDocuments();
 

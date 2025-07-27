@@ -1,6 +1,6 @@
 import cors from "cors";
 import mongoose from "mongoose";
-import {createUser, socialLogin, editUser, getUser, getUserById} from "../puzzleController/userController.js";
+import {createUser, socialLogin, editUser, getUser, getUserById, updateScore,  getLeaderboard} from "../puzzleController/userController.js";
 import {jwtAuthMiddleware} from "../MiddleWear/jwt.js"
 import { createStoreItem, getAllStoreItems } from "../puzzleController/storeController.js";
 import { userPurchase } from "../puzzleController/purchaseController.js"
@@ -13,7 +13,7 @@ import {initiateFriendsGame, joinGameController,startGame, roundEnd} from "../pu
  
 
 const CustomRoutes = (http, express) => {
-   http.get("/wordgame", (req, res) => {
+   http.get("/wordPole", (req, res) => {
      res.send("word Game App");
    });
 
@@ -24,34 +24,39 @@ const CustomRoutes = (http, express) => {
   
 // user routes 
 // http.post("/gameApp/createquestion", upload.single("file"), createquestion);
- http.post("/puzzleApp/createUser", createUser);
- http.post("/puzzleApp/socialLogin", socialLogin);
- http.patch("/puzzleApp/editUser",jwtAuthMiddleware, editUser);
- http.get("/puzzleApp/getUser",jwtAuthMiddleware, getUser);
- http.get("/puzzleApp/getUserById/:id", getUserById);
+ http.post("/wordPole/guestLogin", createUser);
+ http.post("/wordPole/socialLogin", socialLogin);
+ http.post("/wordPole/updateProfile",jwtAuthMiddleware, editUser);
+ http.get("/wordPole/getUser",jwtAuthMiddleware, getUser);
+ http.get("/wordPole/getUserById/:id", getUserById);
+ http.get("/wordPole/getLeaderboard", getLeaderboard);
+
+
+http.post("/wordPole/updateScore",jwtAuthMiddleware, updateScore);
+http.get("/wordPole/leaderboard", getLeaderboard)
 
 
 
-
+getLeaderboard
 
 
 
 // // store routes 
-http.post("/puzzleApp/createstoreItem", createStoreItem);
-http.get("/puzzleApp/getAllStoreItems", getAllStoreItems);
-http.post("/puzzleApp/userPurchase",jwtAuthMiddleware, userPurchase);
+http.post("/wordPole/createstoreItem", createStoreItem);
+http.get("/wordPole/getAllStoreItems", getAllStoreItems);
+http.post("/wordPole/userPurchase",jwtAuthMiddleware, userPurchase);
 
 
 
 // purchase routes 
-http.post("/puzzleApp/userPurchase",jwtAuthMiddleware, userPurchase);
+http.post("/wordPole/userPurchase",jwtAuthMiddleware, userPurchase);
 startGame
 roundEnd
 // gameroutes
-http.post("/puzzleApp/initiateFriendsGame",jwtAuthMiddleware, initiateFriendsGame);
-http.post("/puzzleApp/joinGameController", joinGameController);
-http.post("/puzzleApp/startGame", startGame);
-http.post("/puzzleApp/roundEnd", roundEnd);
+http.post("/wordPole/initiateFriendsGame",jwtAuthMiddleware, initiateFriendsGame);
+http.post("/wordPole/joinGameController", joinGameController);
+http.post("/wordPole/startGame", startGame);
+http.post("/wordPole/roundEnd", roundEnd);
 
 }
 

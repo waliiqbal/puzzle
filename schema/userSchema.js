@@ -3,17 +3,21 @@ import mongoose from "mongoose";
 
 const userSchema = new Schema({
    username: { type: String, required: true },
-  avatar: { type: String, default: 'default_avatar' },
+  displayPic: { type: String, default: 'default_avatar' },
   email: { type: String, unique: true, sparse: true },
   authProvider: {
     type: String,
-    enum: ['google', 'facebook', 'guest'],
+    enum: ['google', 'facebook', 'apple', 'guest'],
     default: 'guest',
   },
   providerId: { type: String, default: null },
-
+  deviceId: { type: String, default: null },
   // Consumables
   coins: { type: Number, default: 0 },
+  score: { type: Number, default: 0 },
+  totalScore: { type: Number, default: 0 },
+  totalWin: { type: Number, default: 0 },
+  longestWordCount: { type: Number, default: 0 },
   hintsLeft: { type: Number, default: 0 },
   revertsLeft: { type: Number, default: 0 },
 
@@ -31,5 +35,7 @@ const userSchema = new Schema({
 }, {
   timestamps: true
 });
+
+
 
 export { userSchema  }; 

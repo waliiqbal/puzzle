@@ -1,10 +1,10 @@
-import { createUserService, socialLoginService, editUserService, getUserService, getUserByIdService } from '../services/userService.js'
+import { createUserService, socialLoginService, editUserService, getUserService, getUserByIdService,  addScoreUserService, getLeaderboardService  } from '../services/userService.js'
 
 const createUser = async (req, res) => {
   try {
-    const { username } = req.body;
+    const { deviceId } = req.body;
 
-    const { user, token } = await createUserService(req.body);
+    const { user, token } = await createUserService(deviceId);
 
     res.status(201).json({
       success: true,
@@ -25,9 +25,9 @@ const createUser = async (req, res) => {
 
 const socialLogin = async (req, res) => {
   try {
-    const { authProvider, token } = req.body;
+    const { authProvider, token, socialId, name, email, deviceId  } = req.body;
 
-    const result = await socialLoginService({ authProvider, token });
+    const result = await socialLoginService({ authProvider, token, socialId, name, email, deviceId });
 
     res.status(200).json({
       success: true,
@@ -50,12 +50,16 @@ const editUser = async (req, res) => {
     const _id = req.user.id; // 🟢 middleware se id mil rahi
 
     const {
-      username,
-      avatar,
+      name,
+      displayPic,
       email,
       authProvider,
       providerId,
       coins,
+      score,
+      totalScore,
+      totalWin,
+      longestWordCount,
       hintsLeft,
       revertsLeft,
       themeId,
@@ -67,12 +71,16 @@ const editUser = async (req, res) => {
     } = req.body;
 
     const updateFields = {
-      username,
-      avatar,
+      username: name,
+      displayPic: displayPic,
       email,
       authProvider,
       providerId,
       coins,
+      score,
+      totalScore,
+      totalWin,
+      longestWordCount,
       hintsLeft,
       revertsLeft,
       themeId,
@@ -96,6 +104,26 @@ const editUser = async (req, res) => {
   }
 };
 
+const updateScore = async (req, res) => {
+  try {
+    const _id = req.user.id;
+    const { score, totalScore, totalWin, longestWordCount } = req.body;
+
+    const payload = { score, totalScore, totalWin, longestWordCount };
+
+    const updatedUser = await addScoreUserService(_id, payload);
+
+    return res.status(200).json({
+      message: "User updated successfully",
+      data: updatedUser,
+    });
+  } catch (error) {
+    console.error("Error in addScoreUser:", error.message);
+    return res.status(500).json({
+      error: error.message || "Failed to update user",
+    });
+  }
+};
 
 const getUser = async (req, res) => {
   try {
@@ -136,8 +164,25 @@ const getUserById = async (req, res) => {
 };
 
 
+const getLeaderboard = async (req, res) => {
+  try {
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+
+    const leaderboardData = await getLeaderboardService(page, limit);
+
+    return res.status(200).json({
+      message: "Leaderboard fetched successfully",
+      data: leaderboardData,
+    });
+  } catch (error) {
+    console.error("Error in getLeaderboard:", error.message);
+    return res.status(500).json({
+      error: "Failed to fetch leaderboard",
+    });
+  }
+};
 
 
 
-
-export { createUser, socialLogin, editUser, getUser, getUserById };
+export { createUser, socialLogin, editUser, getUser, getUserById, updateScore, getLeaderboard };

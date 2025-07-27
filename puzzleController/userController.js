@@ -10,8 +10,7 @@ const createUser = async (req, res) => {
     res.status(201).json({
       success: true,
       message: "User created successfully",
-      user,
-      token,
+      data: {user, token}
     });
 
   } catch (err) {
@@ -33,7 +32,7 @@ const socialLogin = async (req, res) => {
     res.status(200).json({
       success: true,
       message: "Social login successful",
-      ...result,
+      data: result,
     });
   } catch (err) {
     res.status(401).json({
@@ -115,7 +114,7 @@ const editUser = async (req, res) => {
 
     res.status(200).json({
       message: "User updated successfully",
-      user: updatedUser,
+      data: updatedUser 
     });
   } catch (error) {
     res.status(error.statusCode || 500).json({

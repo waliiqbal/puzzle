@@ -134,7 +134,7 @@ const updateScore = async (req, res) => {
 
     return res.status(200).json({
       message: "User updated successfully",
-      data: updatedUser,
+      data: {user: updatedUser},
     });
   } catch (error) {
     console.error("Error in addScoreUser:", error.message);

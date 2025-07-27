@@ -170,7 +170,7 @@ const editUserService = async (_id, updateFields) => {
     throw error;
   }
 
-  return updatedUser;
+  return {user: updatedUser};
 };
 
 const getUserService = async (_id) => {

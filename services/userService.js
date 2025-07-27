@@ -221,14 +221,21 @@ const getLeaderboardService = async (page = 1, limit = 10) => {
 
   const totalUsers = await userData.countDocuments();
 
+  // Rank is skip + index + 1
+  const usersWithRank = users.map((user, index) => ({
+    ...user.toObject(),
+    rank: skip + index + 1,
+  }));
+
   return {
-    users,
+    users: usersWithRank,
     totalUsers,
     totalPages: Math.ceil(totalUsers / limit),
     page,
     limit,
   };
 };
+
 
 
 export { createUserService, socialLoginService, editUserService, getUserService, getUserByIdService,  addScoreUserService, getLeaderboardService  };

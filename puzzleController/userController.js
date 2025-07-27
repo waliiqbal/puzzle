@@ -1,4 +1,5 @@
 import { createUserService, socialLoginService, editUserService, getUserService, getUserByIdService,  addScoreUserService, getLeaderboardService  } from '../services/userService.js'
+import { uploadToS3 } from '../MiddleWear/uploadS3.js';
 
 const createUser = async (req, res) => {
   try {
@@ -42,6 +43,25 @@ const socialLogin = async (req, res) => {
   }
 };
 
+
+const uploadAppFile = async (req, res) => {
+  try {
+    const filePath = req.file.path;
+    const s3Url = await uploadToS3(req.file);
+    console.log("lokout", filePath);
+
+    return res.status(200).json({
+      message: "File Processed & Data Inserted",
+      data: s3Url
+    });
+  } catch (error) {
+    console.error("Error Processing File:", error);
+    return res.status(500).json({
+      message: `Error Processing File: ${error.message}`,
+      error: error.message
+    });
+  }
+};
 
 
 
@@ -185,4 +205,4 @@ const getLeaderboard = async (req, res) => {
 
 
 
-export { createUser, socialLogin, editUser, getUser, getUserById, updateScore, getLeaderboard };
+export { createUser, socialLogin, uploadAppFile, editUser, getUser, getUserById, updateScore, getLeaderboard };

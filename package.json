@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.850.0",
     "@supercharge/promise-pool": "^3.1.0",
     "aws-sdk": "^2.1544.0",
     "axios": "^1.10.0",

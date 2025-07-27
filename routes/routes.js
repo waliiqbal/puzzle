@@ -1,6 +1,6 @@
 import cors from "cors";
 import mongoose from "mongoose";
-import {createUser, socialLogin, editUser, getUser, getUserById, updateScore,  getLeaderboard} from "../puzzleController/userController.js";
+import {createUser, socialLogin, uploadAppFile, editUser, getUser, getUserById, updateScore,  getLeaderboard} from "../puzzleController/userController.js";
 import {jwtAuthMiddleware} from "../MiddleWear/jwt.js"
 import { createStoreItem, getAllStoreItems } from "../puzzleController/storeController.js";
 import { userPurchase } from "../puzzleController/purchaseController.js"
@@ -9,6 +9,7 @@ import {initiateFriendsGame, joinGameController,startGame, roundEnd} from "../pu
 //  import { createcategory, deletecategory, editCategory, getCategories } from "../gamecontrollers/categoryController.js";
 //  import upload from "../MiddleWear/multer.js"; // Adjust path as needed
 
+import { upload } from '../MiddleWear/uploadS3.js';
 
  
 
@@ -25,6 +26,7 @@ const CustomRoutes = (http, express) => {
 // user routes 
 // http.post("/gameApp/createquestion", upload.single("file"), createquestion);
  http.post("/wordPole/guestLogin", createUser);
+ http.post("/wordPole/uploadImage", upload.single('displayPic'), uploadAppFile);
  http.post("/wordPole/socialLogin", socialLogin);
  http.post("/wordPole/updateProfile",jwtAuthMiddleware, editUser);
  http.get("/wordPole/getUser",jwtAuthMiddleware, getUser);

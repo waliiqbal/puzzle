@@ -95,8 +95,8 @@ const socialLoginService = async ({
       // link the social account
       user.authProvider = authProvider;
       user.providerId   = socialId;
-      user.username     = user.username || name;
-      user.email        = user.email    || email;
+      user.username     = name || user.username;
+      user.email        = email || user.email;
       await user.save();
     }
   }
@@ -129,7 +129,7 @@ const socialLoginService = async ({
 const addScoreUserService = async (userId, payload) => {
   try {
     const updateData = {
-      $inc: { score: payload.score }, // ✅ Auto-increment score
+      $inc: { score: payload.score, coins: payload.coins }, // ✅ Auto-increment score
       $set: {
         totalScore: payload.totalScore,
         totalWin: payload.totalWin,

@@ -126,9 +126,9 @@ const editUser = async (req, res) => {
 const updateScore = async (req, res) => {
   try {
     const _id = req.user.id;
-    const { score, totalScore, totalWin, longestWordCount } = req.body;
+    const { score, coins, totalScore, totalWin, longestWordCount } = req.body;
 
-    const payload = { score, totalScore, totalWin, longestWordCount };
+    const payload = { score, coins, totalScore, totalWin, longestWordCount };
 
     const updatedUser = await addScoreUserService(_id, payload);
 
